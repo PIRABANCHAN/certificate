@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,6 +11,7 @@ body{
   font-family:"Times New Roman",serif;
 }
 
+/* Wrapper */
 .wrapper{
   display:flex;
   justify-content:center;
@@ -18,17 +19,18 @@ body{
   min-height:100vh;
 }
 
+/* Certificate Box */
 .certificate{
   width:900px;
   height:600px;
   background:#fff;
-  border:8px solid #0b5ed7;
+  border:8px solid #1a4fbf;
   padding:30px;
   box-sizing:border-box;
 }
 
+/* Inner Layout */
 .inner-border{
-  border:2px solid #0b5ed7;
   height:100%;
   padding:25px 35px 20px 35px;
   box-sizing:border-box;
@@ -50,17 +52,18 @@ h1{
   font-style:italic;
 }
 
+/* Main Name */
 .name{
   font-size:32px;
   font-weight:bold;
-  color:#0b5ed7;
+  color:#1a4fbf;
   margin:22px 0 8px;
 }
 
+/* FIXED Underline for PDF */
 .line{
-  width:500px; /* 🔥 Long underline like 2nd certificate */
-  height:2px;
-  background:#0b5ed7;
+  width:650px;
+  border-bottom:3px solid #1a4fbf;
   margin:8px auto 22px;
 }
 
@@ -71,7 +74,7 @@ h1{
 }
 
 .company{
-  color:#0b5ed7;
+  color:#1a4fbf;
   font-weight:bold;
 }
 
@@ -94,7 +97,7 @@ h1{
 .days{
   font-size:22px;
   font-weight:bold;
-  color:#0b2c6f;
+  color:#1a4fbf;
 }
 
 .days-sub{
@@ -114,7 +117,7 @@ h1{
 .issue-date{
   font-size:18px;
   font-weight:bold;
-  color:#0b2c6f;
+  color:#1a4fbf;
 }
 
 .issue-sub{
@@ -131,6 +134,21 @@ h1{
   font-size:12px;
   line-height:1.3;
   margin-top:15px;
+}
+
+/* PRINT FIX */
+@media print {
+  body{
+    background:white;
+  }
+
+  .wrapper{
+    min-height:auto;
+  }
+
+  .certificate{
+    border:8px solid #1a4fbf !important;
+  }
 }
 </style>
 </head>
@@ -149,7 +167,8 @@ h1{
 <div class="line"></div>
 
 <div class="content">
-This is to certify that <b>Pirabanchan</b><br>
+This is to certify that 
+<span class="company">Pirabanchan</span><br>
 has undertaken a Listener level internship experience with<br>
 <span class="company">PT Intelligent Machines</span>,<br>
 Coimbatore, and has participated in hands-on projects during the specified period.
@@ -160,7 +179,7 @@ Coimbatore, and has participated in hands-on projects during the specified perio
 <div class="bottom-row">
 
 <div class="qr-box">
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://anyexperience.fi/verified-certificates/PTIM-2025-PIRABANCHAN-001">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&color=1a4fbf&data=https://anyexperience.fi/verified-certificates/PTIM-2025-PIRABANCHAN-001">
 </div>
 
 <div class="days-box">
@@ -170,7 +189,7 @@ Coimbatore, and has participated in hands-on projects during the specified perio
 </div>
 
 <div class="issue-box">
-<div class="issue-date">12 February 2026</div>
+<div class="issue-date">20 February 2026</div>
 <div class="issue-sub">Issue Date</div>
 <div class="issued-by">
 Issued by <span class="company">PT Intelligent Machines</span><br>
